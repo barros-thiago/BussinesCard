@@ -5,8 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bussinescard.App
+import com.example.bussinescard.data.BusinessCard
 import com.example.bussinescard.databinding.ActivityMainBinding
 import com.example.bussinescard.util.Image
+
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy{ActivityMainBinding.inflate(layoutInflater)}
@@ -34,11 +36,17 @@ class MainActivity : AppCompatActivity() {
         adapter.listenerShare = {card ->
             Image.share(this@MainActivity, card)
         }
+
+        adapter.listenerDelete = {
+            mainViewModel.deleteItem(it)
+        }
+
+
     }
 
     private fun getAllBusinesCard(){
         mainViewModel.getAll().observe(this) {businessCard ->
-            adapter.submitList( businessCard)
+            adapter.submitList(businessCard)
         }
     }
 }

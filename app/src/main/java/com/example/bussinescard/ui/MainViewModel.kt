@@ -17,6 +17,10 @@ class MainViewModel(private val businessCardReporsitory: BusinessCardReporsitory
         return businessCardReporsitory.getAll()
     }
 
+    fun deleteItem(businessCard: BusinessCard){
+        businessCardReporsitory.delete(businessCard)
+    }
+
 class MainViewModelFactory(private val repository: BusinessCardReporsitory) : ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(MainViewModel::class.java)){

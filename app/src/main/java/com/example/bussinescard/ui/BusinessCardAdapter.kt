@@ -1,6 +1,5 @@
 package com.example.bussinescard.ui
 
-import android.content.ClipData
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -11,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bussinescard.data.BusinessCard
 import com.example.bussinescard.databinding.ItemBusinessCardBinding
 
+
 class BusinessCardAdapter : ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallBack()) {
     var listenerShare: (View)  -> Unit = {}
+    var listenerDelete: (BusinessCard) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -35,15 +36,17 @@ class BusinessCardAdapter : ListAdapter<BusinessCard, BusinessCardAdapter.ViewHo
             binding.tvNomeEmpresa.text = item.empresa
             if (item.fundoPersonalizado != "")
             { binding.cvContent.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))}
-            binding.cvContent.setOnClickListener{
+
+            binding.cvContent.setOnClickListener {
                 listenerShare(it)
+            }
+            binding.ibDelete.setOnClickListener{
+                listenerDelete(item)
             }
         }
     }
-
-
-
 }
+
 
 class DiffCallBack: DiffUtil.ItemCallback<BusinessCard>() {
     override fun areItemsTheSame(oldItem: BusinessCard, newItem: BusinessCard) = oldItem == newItem

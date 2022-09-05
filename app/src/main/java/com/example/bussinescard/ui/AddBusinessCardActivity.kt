@@ -1,10 +1,9 @@
 package com.example.bussinescard.ui
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.bussinescard.App
 import com.example.bussinescard.R
 import com.example.bussinescard.data.BusinessCard
@@ -42,4 +41,5 @@ class AddBusinessCardActivity : AppCompatActivity() {
             finish()
         }
     }
+
 }
