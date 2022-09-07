@@ -35,11 +35,13 @@ class BusinessCardAdapter : ListAdapter<BusinessCard, BusinessCardAdapter.ViewHo
             binding.tvTelefone.text = item.telefone
             binding.tvNomeEmpresa.text = item.empresa
             if (item.fundoPersonalizado != "")
-            { binding.cvContent.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))}
+            { binding.cvContent.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))
+              binding.ibDelete.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))}
 
             binding.cvContent.setOnClickListener {
                 listenerShare(it)
             }
+
             binding.ibDelete.setOnClickListener{
                 listenerDelete(item)
             }

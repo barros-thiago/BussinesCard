@@ -75,7 +75,7 @@
                 android:backgroundTintMode="screen"
                 android:checkable="true"
                 android:clickable="true"
-                android:contentDescription="@string/bot_odelete"
+                android:contentDescription="BotãoDelete"
                 android:focusable="true"
                 android:src="@drawable/ic_baseline_delete_24"
                 app:layout_constraintEnd_toEndOf="parent"

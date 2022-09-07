@@ -1,5 +1,6 @@
 package com.example.bussinescard.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -28,17 +29,38 @@ class AddBusinessCardActivity : AppCompatActivity() {
             finish()
         }
 
+//        binding.csb.setOnColorChangeListener { colorBarPosition, alphaBarPosition, color ->
+//            val sharp = "#"
+//            binding.txtCor.editText?.setText(sharp.plus(Integer.toHexString(color)))
+//        }
+
+        binding.csb.setOnColorChangeListener { progress, color ->
+            val sharp = "#"
+            binding.txtCor.editText?.setText(sharp.plus(Integer.toHexString(color)))
+        }
+
         binding.btnConfirmar.setOnClickListener {
-            val businessCard = BusinessCard(
-                nome = binding.txtNome.editText?.text.toString() ,
-                telefone = binding.txtTelefone.editText?.text.toString(),
-                email = binding.txtEmail.editText?.text.toString(),
-                empresa = binding.txtEmpresa.editText?.text.toString(),
-                fundoPersonalizado = binding.txtCor.editText?.text.toString()
-                )
-            mainViewModel.insert(businessCard)
-            Toast.makeText(this, R.string.label_show_sucess,Toast.LENGTH_SHORT).show()
-            finish()
+            try {
+                if (binding.txtCor.editText?.text?.isBlank() == false){
+                    val color = Color.parseColor(binding.txtCor.editText?.text.toString().uppercase())
+
+                    val businessCard = BusinessCard(
+                        nome = binding.txtNome.editText?.text.toString() ,
+                        telefone = binding.txtTelefone.editText?.text.toString(),
+                        email = binding.txtEmail.editText?.text.toString(),
+                        empresa = binding.txtEmpresa.editText?.text.toString(),
+                        fundoPersonalizado = binding.txtCor.editText?.text.toString().uppercase()
+                    )
+                    mainViewModel.insert(businessCard)
+                    Toast.makeText(this, R.string.label_show_sucess,Toast.LENGTH_SHORT).show()
+                    finish()
+                }else{
+                    Toast.makeText(this, R.string.label_show_unknow_color,Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (iae: IllegalArgumentException) {
+                Toast.makeText(this, R.string.label_show_unknow_color,Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

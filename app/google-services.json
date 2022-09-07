@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "30981745868",
+    "project_id": "business-card-thiago",
+    "storage_bucket": "business-card-thiago.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30981745868:android:05fd0d422334fb21a26669",
+        "android_client_info": {
+          "package_name": "com.example.bussinescard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30981745868-0jogvqemvnrmqkfqe55p7hsm0nfoe0bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj8TAHp-RSmVQ702KDPUqmL23e6OrDtJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30981745868-0jogvqemvnrmqkfqe55p7hsm0nfoe0bm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

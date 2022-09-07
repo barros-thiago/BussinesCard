@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
         adapter.listenerDelete = {
             mainViewModel.deleteItem(it)
         }
-
-
     }
 
     private fun getAllBusinesCard(){
