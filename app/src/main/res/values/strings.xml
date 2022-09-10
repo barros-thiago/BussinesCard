@@ -12,6 +12,8 @@
     <string name="label_show_unknow_color">Cor não encontrada!</string>
     <string name="label_share">Compartilhar</string>
     <string name="bot_odelete">BotãoDelete</string>
+    <string name="label_endereco">Endereço</string>
+    <string name="label_instagram">Instagram</string>
 
     <array name="custom_colors">
 

@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/drawable/ic_add.xml" value="0.2775" />
         <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.168" />
+        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/drawable/ic_email.xml" value="0.258" />
+        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/drawable/ic_icons8_instagram.xml" value="0.258" />
+        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/drawable/ic_icons8_whatsapp.xml" value="0.258" />
         <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout-v21/item_business_card.xml" value="0.271875" />
-        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout/activity_add_business_card.xml" value="0.1" />
+        <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout/activity_add_business_card.xml" value="0.22" />
         <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout/activity_add_bussines_card.xml" value="0.33" />
         <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Thiago/AndroidStudioProjects/BussinesCard/app/src/main/res/layout/item_business_card.xml" value="0.33" />

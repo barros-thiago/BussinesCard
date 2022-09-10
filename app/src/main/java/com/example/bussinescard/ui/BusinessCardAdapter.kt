@@ -33,13 +33,19 @@ class BusinessCardAdapter : ListAdapter<BusinessCard, BusinessCardAdapter.ViewHo
             binding.tvNome.text = item.nome
             binding.tvEmail.text = item.email
             binding.tvTelefone.text = item.telefone
+            binding.tvInstagram.text = item.instagram
+            binding.tvEndereco.text = item.endereco
             binding.tvNomeEmpresa.text = item.empresa
             if (item.fundoPersonalizado != "")
             { binding.cvContent.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))
               binding.ibDelete.setBackgroundColor(Color.parseColor(item.fundoPersonalizado))}
 
             binding.cvContent.setOnClickListener {
+                //Esconde o ibDelete, antes do print
+                binding.ibDelete.visibility = View.GONE
                 listenerShare(it)
+                //Mostra o ibDelete, depois do print
+                binding.ibDelete.visibility = View.VISIBLE
             }
 
             binding.ibDelete.setOnClickListener{

@@ -29,11 +29,6 @@ class AddBusinessCardActivity : AppCompatActivity() {
             finish()
         }
 
-//        binding.csb.setOnColorChangeListener { colorBarPosition, alphaBarPosition, color ->
-//            val sharp = "#"
-//            binding.txtCor.editText?.setText(sharp.plus(Integer.toHexString(color)))
-//        }
-
         binding.csb.setOnColorChangeListener { progress, color ->
             val sharp = "#"
             binding.txtCor.editText?.setText(sharp.plus(Integer.toHexString(color)))
@@ -47,8 +42,10 @@ class AddBusinessCardActivity : AppCompatActivity() {
                     val businessCard = BusinessCard(
                         nome = binding.txtNome.editText?.text.toString() ,
                         telefone = binding.txtTelefone.editText?.text.toString(),
+                        instagram = binding.txtInstagram.editText?.text.toString(),
                         email = binding.txtEmail.editText?.text.toString(),
                         empresa = binding.txtEmpresa.editText?.text.toString(),
+                        endereco = binding.txtEndereco.editText?.text.toString(),
                         fundoPersonalizado = binding.txtCor.editText?.text.toString().uppercase()
                     )
                     mainViewModel.insert(businessCard)
